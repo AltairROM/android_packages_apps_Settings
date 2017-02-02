@@ -655,4 +655,6 @@ public class Settings extends SettingsActivity {
     public static class SafetyCenterActivity extends SettingsActivity { }
 
     public static class AltairSettingsActivity extends SettingsActivity { /* empty */ }
+
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }

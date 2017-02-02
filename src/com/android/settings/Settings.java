@@ -527,4 +527,6 @@ public class Settings extends SettingsActivity {
      * Activities for AltairSettings
      */
     public static class AltairSettingsActivity extends SettingsActivity {}
+
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }

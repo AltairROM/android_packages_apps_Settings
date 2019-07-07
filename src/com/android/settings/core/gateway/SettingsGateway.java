@@ -219,6 +219,7 @@ import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSetting
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.altair.settings.AltairSettings;
+import com.altair.settings.fragments.display.SmartPixels;
 
 public class SettingsGateway {
 
@@ -427,6 +428,7 @@ public class SettingsGateway {
             FlashNotificationsPreferenceFragment.class.getName(),
             AltairSettings.class.getName(),
             RunningServices.class.getName(),
+            SmartPixels.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -475,5 +477,6 @@ public class SettingsGateway {
             Settings.NavigationModeSettingsActivity.class.getName(),
             Settings.AltairSettingsActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
+            Settings.SmartPixelsActivity.class.getName(),
     };
 }

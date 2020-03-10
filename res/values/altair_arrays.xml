@@ -16,4 +16,21 @@
 -->
 <resources>
 
+    <!-- Dark style -->
+    <string-array name="dark_overlay_entries" translatable="false">
+        <item>@string/style_dark_overlay_default</item>
+        <item>@string/style_dark_overlay_black</item>
+        <item>@string/style_dark_overlay_matte_black</item>
+        <item>@string/style_dark_overlay_dark_gray</item>
+        <item>@string/style_dark_overlay_solarized</item>
+    </string-array>
+
+    <string-array name="dark_overlay_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

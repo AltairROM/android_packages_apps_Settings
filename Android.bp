@@ -98,6 +98,7 @@ android_library {
         "factory_reset_flags_lib",
         "fuelgauge-log-protos-lite",
         "fuelgauge-usage-state-protos-lite",
+        "glide",
         "power-anomaly-event-protos-lite",
         "settings-contextual-card-protos-lite",
         "settings-log-bridge-protos-lite",
@@ -164,4 +165,9 @@ android_library_import {
 filegroup {
     name: "Settings_proguard_flags",
     srcs: ["proguard.flags"],
+}
+
+android_library_import {
+    name: "glide",
+    aars: ["libs/glide-4.16.0.aar"],
 }

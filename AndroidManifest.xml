@@ -3456,7 +3456,7 @@
         </activity>
 
         <!-- Smart Pixels -->
-        <!--<activity android:name="Settings$SmartPixelsActivity"
+        <activity android:name="Settings$SmartPixelsActivity"
                 android:label="@string/smart_pixels_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -3464,7 +3464,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.altair.settings.fragments.SmartPixels" />
-        </activity>-->
+        </activity>
 
         <!-- Navbar -->
         <!--<activity

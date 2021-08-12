@@ -60,6 +60,7 @@
         settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"
         settings:keywords="@string/keywords_system_navigation" />
 
+    <!--
     <Preference
         android:key="gesture_settings"
         android:title="@string/gesture_preference_title"
@@ -67,6 +68,7 @@
         android:order="-250"
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+    -->
 
     <Preference
         android:key="date_time_settings"

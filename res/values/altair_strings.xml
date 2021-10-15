@@ -16,12 +16,4 @@
 -->
 <resources>
 
-    <!-- Dark style -->
-    <string name="style_dark_overlay_title">Dark mode background</string>
-    <string name="style_dark_overlay_default">Device default</string>
-    <string name="style_dark_overlay_black">Black</string>
-    <string name="style_dark_overlay_matte_black">Matte black</string>
-    <string name="style_dark_overlay_dark_gray">Dark gray</string>
-    <string name="style_dark_overlay_solarized">Solarized</string>
-
 </resources>

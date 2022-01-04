@@ -43,4 +43,9 @@
     <string name="platform_revision">Platform</string>
     <string name="total_ram">Total RAM</string>
     <string name="about_device_name">Device</string>
+
+    <!-- AdGuard DNS Option -->
+    <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
+    <!-- AdGuard DNS hostname -->
+    <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
 </resources>

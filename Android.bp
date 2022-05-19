@@ -54,12 +54,23 @@ android_library {
         "SpaPrivilegedLib-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+        "AltairSettings/src/**/*.java",
+    ],
+
+    aaptflags: [
+        "--extra-packages com.altair.settings"
+    ],
+
     resource_dirs: [
         "res",
         "res-export", // for external usage
         "res-product",
+        "AltairSettings/res"
     ],
+
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
         "androidx.slice_slice-builders",
@@ -109,6 +120,7 @@ android_library {
         "LineagePreferenceLib",
         "vendor.lineage.fastcharge-V1.0-java",
         "SystemUISharedLib",
+        "VendorSupport-preference",
     ],
 
     plugins: ["androidx.room_room-compiler-plugin"],
@@ -117,6 +129,9 @@ android_library {
         "telephony-common",
         "ims-common",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard-core.flags"],
+    },
 }
 
 platform_compat_config {

@@ -448,4 +448,9 @@ public class Settings extends SettingsActivity {
      * Activity for OneHandedSettings
      */
     public static class OneHandedSettingsActivity extends SettingsActivity { /* empty */ }
+
+    /**
+     * Activities for AltairSettings
+     */
+    public static class AltairSettingsActivity extends SettingsActivity {}
 }

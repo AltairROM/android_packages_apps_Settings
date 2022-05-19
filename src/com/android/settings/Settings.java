@@ -818,4 +818,7 @@ public class Settings extends SettingsActivity {
             }
         }
     }
+
+    /** Activity for Altair Settings. */
+    public static class AltairSettingsActivity extends SettingsActivity { /* empty */ }
 }

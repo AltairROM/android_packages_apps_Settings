@@ -239,6 +239,15 @@
         android:order="-90"
         android:key="top_level_account_category"
         android:layout="@layout/settingslib_preference_category_no_title">
+
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.altair.settings.AltairSettings"
+            android:icon="@drawable/ic_settings_altairsettings"
+            android:key="top_level_altair_settings"
+            android:order="-50"
+            android:title="@string/altair_settings_activity_title"
+            android:summary="@string/altair_settings_activity_summary"
+            settings:controller="com.altair.settings.TopLevelSettingsPreferenceController"/>
     </PreferenceCategory>
 
     <PreferenceCategory

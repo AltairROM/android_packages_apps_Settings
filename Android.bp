@@ -41,6 +41,9 @@ java_library {
     libs: [
         "app-compat-annotations",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard-core.flags"],
+    },
 }
 
 android_library {
@@ -51,15 +54,24 @@ android_library {
         "SpaPrivilegedLib-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+        "AltairSettings/src/**/*.java",
+        "AltairSettings/src/**/*.kt",
+    ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/shared/**/*.kt",
     ],
     use_resource_processor: true,
+    aaptflags: [
+        "--extra-packages com.altair.settings"
+    ],
     resource_dirs: [
         "res",
         "res-export", // for external usage
         "res-product",
+        "AltairSettings/res",
     ],
     static_libs: [
         // External dependencies
@@ -109,6 +121,9 @@ android_library {
         "org.lineageos.platform.internal",
         "LineagePreferenceLib",
         "vendor.lineage.fastcharge-V1.0-java",
+
+        // Altair ROM dependencies
+        "VendorSupport-preference",
     ],
 
     plugins: ["androidx.room_room-compiler-plugin"],

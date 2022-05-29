@@ -47,6 +47,10 @@ public class WifiDataUsageSummaryPreferenceController extends DataUsageSummaryPr
             return;
         }
 
+        if (mDataUsageController == null || mDataInfoController == null || mPolicyEditor == null) {
+            updateConfiguration(mContext, mSubId, getSubscriptionInfo(mSubId));
+        }
+
         final DataUsageSummaryPreference mPreference = (DataUsageSummaryPreference) preference;
         final NetworkTemplate template = new NetworkTemplate.Builder(NetworkTemplate.MATCH_WIFI)
                 .setWifiNetworkKeys(mAllNetworkKeys).build();

@@ -127,11 +127,18 @@ public class DataUsageSummaryPreferenceController extends TelephonyBasePreferenc
             int subscriptionId, SubscriptionInfo subInfo) {
         final NetworkPolicyManager policyManager =
                 context.getSystemService(NetworkPolicyManager.class);
-        mPolicyEditor = new NetworkPolicyEditor(policyManager);
+        if (mPolicyEditor == null) {
+            mPolicyEditor = new NetworkPolicyEditor(policyManager);
+        }
 
-        mDataUsageController = createDataUsageController(context);
-        mDataUsageController.setSubscriptionId(subscriptionId);
-        mDataInfoController = new DataUsageInfoController();
+        if (mDataUsageController == null) {
+            mDataUsageController = createDataUsageController(context);
+            mDataUsageController.setSubscriptionId(subscriptionId);
+        }
+
+        if (mDataInfoController == null) {
+            mDataInfoController = new DataUsageInfoController();
+        }
 
         if (subInfo != null) {
             mDataUsageTemplate = R.string.cell_data_template;
@@ -207,10 +214,14 @@ public class DataUsageSummaryPreferenceController extends TelephonyBasePreferenc
 
     @Override
     public void updateState(Preference preference) {
+        if (preference == null) {
+            return;
+        }
+
         DataUsageSummaryPreference summaryPreference = (DataUsageSummaryPreference) preference;
 
         final SubscriptionInfo subInfo = getSubscriptionInfo(mSubId);
-        if (mDataUsageController == null) {
+        if (mDataUsageController == null || mDataInfoController == null || mPolicyEditor == null) {
             updateConfiguration(mContext, mSubId, subInfo);
         }
 

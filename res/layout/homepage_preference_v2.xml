@@ -41,6 +41,7 @@
 
         <androidx.preference.internal.PreferenceImageView
             android:id="@android:id/icon"
+            android:tint="?android:attr/colorAccent"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:scaleType="centerInside"/>

@@ -95,4 +95,7 @@
     <!-- Disable DNS for VPN -->
     <string name="vpn_enforce_dns_title">Disable for VPN</string>
     <string name="vpn_enforce_dns_summary">Disable the private DNS when connected to a VPN and restore upon disconnecting</string>
+
+    <!-- Dark style -->
+    <string name="style_dark_overlay_title">Dark mode background</string>
 </resources>

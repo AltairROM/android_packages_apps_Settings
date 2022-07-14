@@ -100,4 +100,7 @@
     <!-- Force dark mode -->
     <string name="force_dark_title">Dark mode for third-party apps</string>
     <string name="force_dark_summary">Forces darker colors in apps lacking dark mode. Some screens may appear off.</string>
+
+    <!-- Dark style -->
+    <string name="style_dark_overlay_title">Dark mode background</string>
 </resources>

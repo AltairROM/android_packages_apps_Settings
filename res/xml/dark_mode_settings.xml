@@ -62,6 +62,7 @@
         settings:searchable="false"
         settings:controller="com.android.settings.display.darkmode.DarkModeCustomBedtimePreferenceController" />
 
+    <!--
     <lineageos.preference.LineageSecureSettingSwitchPreference
         android:key="berry_black_theme"
         android:dependency="dark_ui_activated"
@@ -69,4 +70,9 @@
         android:summary="@string/berry_black_theme_summary"
         android:defaultValue="false"
         settings:requiresPackage="org.lineageos.overlay.customization.blacktheme" />
+    -->
+
+    <ListPreference
+        android:key="android.theme.customization.system_palette"
+        android:title="@string/style_dark_overlay_title"/>
 </PreferenceScreen>

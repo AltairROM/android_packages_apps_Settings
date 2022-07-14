@@ -49,4 +49,7 @@
 
     <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
     <string name="screen_time_summary_usage_today">%1$s today</string>
+
+    <!-- Dark style -->
+    <string name="style_dark_overlay_title">Dark mode background</string>
 </resources>

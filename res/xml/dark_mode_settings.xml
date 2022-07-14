@@ -55,6 +55,10 @@
             android:title="@string/force_dark_title"
             android:summary="@string/force_dark_summary"
             settings:searchable="true"/>
+
+        <ListPreference
+            android:key="android.theme.customization.system_palette"
+            android:title="@string/style_dark_overlay_title"/>
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -120,4 +120,7 @@
 
     <!-- Dark style -->
     <string name="style_dark_overlay_title">Dark mode background</string>
+
+    <!-- Per-app volume -->
+    <string name="app_volume">App volume</string>
 </resources>

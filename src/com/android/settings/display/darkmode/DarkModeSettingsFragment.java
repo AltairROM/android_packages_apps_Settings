@@ -38,6 +38,7 @@ import com.android.settings.accessibility.Flags;
 import com.android.settings.accessibility.ForceInvertSurveyButtonPreferenceController;
 import com.android.settings.accessibility.SurveyManager;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.utils.ThemeUtils;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
 

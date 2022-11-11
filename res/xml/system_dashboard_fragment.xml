@@ -35,6 +35,7 @@
                 android:targetClass="@string/additional_system_update_menu"/>
         </Preference>
 
+        <!--
         <Preference
             android:key="system_update_settings"
             android:title="@string/system_update_settings_list_item_title"
@@ -44,6 +45,7 @@
             settings:controller="com.android.settings.system.SystemUpdatePreferenceController">
             <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"/>
         </Preference>
+        -->
     </PreferenceCategory>
 
     <PreferenceCategory

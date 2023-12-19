@@ -60,6 +60,7 @@ public class ThemeUtils {
     public static final String DARK_THEME_KEY = "android.theme.customization.system_palette";
     public static final String LOCKSCREEN_FONT_KEY = "android.theme.customization.lockscreen_clock_font";
     public static final String QS_UI_KEY = "android.theme.customization.qs_ui";
+    public static final String QS_PANEL_KEY = "android.theme.customization.qs_panel";
 
     public static final Comparator<OverlayInfo> OVERLAY_INFO_COMPARATOR =
             Comparator.comparingInt(a -> a.priority);

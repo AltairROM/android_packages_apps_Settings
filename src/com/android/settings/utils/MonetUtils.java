@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Altair ROM Project
+ * Copyright (C) 2022-2024 Altair ROM Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,27 +23,23 @@ import android.provider.Settings;
 
 public class MonetUtils {
 
-    public static final String KEY_MONET_COLOR_ACCENT = "monet_engine_color_accent";
-    public static final String KEY_MONET_TINT_SURFACE = "monet_engine_tint_surface";
-    public static final String KEY_MONET_ACCURATE_SHADES = "monet_engine_accurate_shades";
+    public static final String KEY_MONET_ACCENT_COLOR = "monet_engine_accent_color";
     public static final String KEY_MONET_RICHER_COLORS = "monet_engine_richer_colors";
+    public static final String KEY_MONET_TINT_BACKGROUND = "monet_engine_tint_background";
     public static final String KEY_MONET_CHROMA_FACTOR = "monet_engine_chroma_factor";
-    public static final String KEY_MONET_WHITE_LUMINANCE = "monet_engine_white_luminance";
-    public static final String KEY_MONET_LINEAR_LIGHTNESS = "monet_engine_linear_lightness";
+    public static final String KEY_MONET_LUMINANCE_FACTOR = "monet_engine_luminance_factor";
 
-    public static final int ACCENT_COLOR_DISABLED = 0;
-    public static final boolean SURFACE_TINT_DEFAULT = true;
-    public static final boolean ACCURATE_SHADES_DEFAULT = true;
+    public static final int ACCENT_COLOR_DEFAULT = 0;
     public static final boolean RICHER_COLORS_DEFAULT = false;
-    public static final boolean LINEAR_LIGHTNESS_DEFAULT = false;
+    public static final boolean TINT_BACKGROUND_DEFAULT = true;
 
     public static final int CHROMA_FACTOR_DEFAULT = 100;
-    public static final int CHROMA_FACTOR_MIN = 0;
-    public static final int CHROMA_FACTOR_MAX = 1000;
+    public static final int CHROMA_FACTOR_MIN = 25;
+    public static final int CHROMA_FACTOR_MAX = 225;
 
-    public static final int WHITE_LUMINANCE_DEFAULT = 425;
-    public static final int WHITE_LUMINANCE_MIN = 0;
-    public static final int WHITE_LUMINANCE_MAX = 400;
+    public static final int LUMINANCE_FACTOR_DEFAULT = 100;
+    public static final int LUMINANCE_FACTOR_MIN = 25;
+    public static final int LUMINANCE_FACTOR_MAX = 225;
 
     private Context mContext;
 
@@ -80,50 +76,40 @@ public class MonetUtils {
      * Public class functions.
      */
 
-    // Returns true if accent color is set, false if not.
-    public boolean isAccentColorSet() {
-        return getAccentColor() != ACCENT_COLOR_DISABLED;
-    }
-
-    // Returns the current accent color.
-    public int getAccentColor() {
-        return getInt(KEY_MONET_COLOR_ACCENT, ACCENT_COLOR_DISABLED);
-    }
-
-    // Sets the accent color. Setting to ACCENT_COLOR_DISABLED removes the custom color and
-    // returns the system to using the color obtained from the current wallpaper.
-    public void setAccentColor(int color) {
-        putInt(KEY_MONET_COLOR_ACCENT, color);
-    }
-
-    // Returns true if surface color tinting is enabled, false if not.
-    public boolean isSurfaceTintEnabled() {
-        return getBoolean(KEY_MONET_TINT_SURFACE, SURFACE_TINT_DEFAULT);
-    }
-
-    // Enables or disables surface color tinting.
-    public void setSurfaceTintEnabled(boolean enable) {
-        putBoolean(KEY_MONET_TINT_SURFACE, enable);
-    }
-
-    // Returns true if accurate color shading is enabled, false if not.
-    public boolean isAccurateShadesEnabled() {
-        return getBoolean(KEY_MONET_ACCURATE_SHADES, ACCURATE_SHADES_DEFAULT);
-    }
-
-    // Enables or disables accurate color shading.
-    public void setAccurateShadesEnabled(boolean enable) {
-        putBoolean(KEY_MONET_ACCURATE_SHADES, enable);
-    }
-
-    // Returns true if richer colors are enabled, false if not.
+    // Returns true if richer colors is enabled, false if not.
     public boolean isRicherColorsEnabled() {
         return getBoolean(KEY_MONET_RICHER_COLORS, RICHER_COLORS_DEFAULT);
     }
 
-    // Enables or disables richer colors.
+    // Enables or disables richer accent colors.
     public void setRicherColorsEnabled(boolean enable) {
         putBoolean(KEY_MONET_RICHER_COLORS, enable);
+    }
+
+    // Returns true if accent color is set, false if not.
+    public boolean isAccentColorSet() {
+        return getAccentColor() != ACCENT_COLOR_DEFAULT;
+    }
+
+    // Returns the current accent color.
+    public int getAccentColor() {
+        return getInt(KEY_MONET_ACCENT_COLOR, ACCENT_COLOR_DEFAULT);
+    }
+
+    // Sets the accent color. Setting to ACCENT_COLOR_DEFAULT removes the custom accent color and
+    // returns the system to using the color obtained from the current wallpaper.
+    public void setAccentColor(int color) {
+        putInt(KEY_MONET_ACCENT_COLOR, color);
+    }
+
+    // Returns true if background color tinting is enabled, false if not.
+    public boolean isTintBackgroundEnabled() {
+        return getBoolean(KEY_MONET_TINT_BACKGROUND, TINT_BACKGROUND_DEFAULT);
+    }
+
+    // Enables or disables background color tinting.
+    public void setTintBackgroundEnabled(boolean enable) {
+        putBoolean(KEY_MONET_TINT_BACKGROUND, enable);
     }
 
     // Returns the current chroma factor value.
@@ -143,30 +129,20 @@ public class MonetUtils {
         }
     }
 
-    // Returns the current white luminance value.
-    public int getWhiteLuminance() {
-        return getInt(KEY_MONET_WHITE_LUMINANCE, WHITE_LUMINANCE_DEFAULT);
+    // Returns the current luminance factor value.
+    public int getLuminanceFactor() {
+        return getInt(KEY_MONET_LUMINANCE_FACTOR, LUMINANCE_FACTOR_DEFAULT);
     }
 
-    // Sets the white luminance value. Value cannot be set higher than WHITE_LUMINANCE_MAX or lower
-    // than WHITE_LUMINANCE_MIN.
-    public void setWhiteLuminance(int value) {
-        if (value < WHITE_LUMINANCE_MIN) {
-            putInt(KEY_MONET_WHITE_LUMINANCE, WHITE_LUMINANCE_MIN);
-        } else if (value > WHITE_LUMINANCE_MAX) {
-            putInt(KEY_MONET_WHITE_LUMINANCE, WHITE_LUMINANCE_MAX);
+    // Sets the luminance factor value. Value cannot be set higher than LUMINANCE_FACTOR_MAX or lower
+    // than LUMINANCE_FACTOR_MIN.
+    public void setLuminanceFactor(int value) {
+        if (value < LUMINANCE_FACTOR_MIN) {
+            putInt(KEY_MONET_LUMINANCE_FACTOR, LUMINANCE_FACTOR_MIN);
+        } else if (value > LUMINANCE_FACTOR_MAX) {
+            putInt(KEY_MONET_LUMINANCE_FACTOR, LUMINANCE_FACTOR_MAX);
         } else {
-            putInt(KEY_MONET_WHITE_LUMINANCE, value);
+            putInt(KEY_MONET_LUMINANCE_FACTOR, value);
         }
-    }
-
-    // Returns true if linear lightness is enabled, false if not.
-    public boolean isLinearLightnessEnabled() {
-        return getBoolean(KEY_MONET_RICHER_COLORS, LINEAR_LIGHTNESS_DEFAULT);
-    }
-
-    // Enables or disables linear lightness.
-    public void setLinearLightnessEnabled(boolean enable) {
-        putBoolean(KEY_MONET_LINEAR_LIGHTNESS, enable);
     }
 }

@@ -19,7 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="system_dashboard_screen"
     android:title="@string/header_category_system">
-    
+
     <com.android.settingslib.widget.IllustrationPreference
         android:key="sys_illustration"
         settings:lottie_rawRes="@raw/sys_illustration"
@@ -51,6 +51,7 @@
         android:fragment="com.android.settings.inputmethod.TouchpadAndMouseSettings"
         settings:controller="com.android.settings.inputmethod.TouchpadAndMouseSettingsController"/>
 
+    <!--
     <Preference
         android:icon="@drawable/ic_hand_gesture"
         android:key="gesture_system_navigation_input_summary"
@@ -59,6 +60,7 @@
         android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
         settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"
         settings:keywords="@string/keywords_system_navigation" />
+    -->
 
     <!--
     <Preference
@@ -124,7 +126,7 @@
         android:order="-30"
         android:fragment="com.android.settings.system.ResetDashboardFragment"
         settings:controller="com.android.settings.system.ResetPreferenceController"/>
-        
+
     <com.android.settings.spa.preference.ComposePreference
         android:key="developer_options"
         android:order="100"

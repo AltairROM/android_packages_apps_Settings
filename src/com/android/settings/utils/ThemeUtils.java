@@ -69,6 +69,10 @@ public class ThemeUtils {
     public static final String QS_UI_KEY = "android.theme.customization.qs_ui";
     public static final String QS_PANEL_KEY = "android.theme.customization.qs_panel";
 
+    public static final String TARGET_PACKAGE_ANDROID = "android";
+    public static final String TARGET_PACKAGE_SYSTEMUI = "com.android.systemui";
+    public static final String TARGET_PACKAGE_LAUNCHER = "com.android.launcher3";
+
     public static final Comparator<OverlayInfo> OVERLAY_INFO_COMPARATOR =
             Comparator.comparingInt(a -> a.priority);
 

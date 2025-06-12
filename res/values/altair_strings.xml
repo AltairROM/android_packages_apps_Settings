@@ -9,6 +9,11 @@
     <!-- About Altair ROM -->
     <string name="about_device_name">Device</string>
 
+    <!-- Sound & vibration -->
+    <string name="sound_patterns_category">Sound patterns</string>
+    <string name="audio_category">Audio</string>
+    <string name="system_sounds_and_vibrations_category">System sounds &amp; vibrations</string>
+
     <!-- Hardware info -->
     <string name="platform_revision">Platform</string>
     <string name="total_ram">Total RAM</string>

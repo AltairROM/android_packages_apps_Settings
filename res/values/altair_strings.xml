@@ -113,4 +113,9 @@
     <!-- Application downgrade -->
     <string name="app_downgrade_title">Allow app downgrade</string>
     <string name="app_downgrade_summary">This allows you to downgrade applications. Note that this may lead to crashes and data corruption.</string>
+
+    <!-- Sound & vibration -->
+    <string name="sound_patterns_category">Sound patterns</string>
+    <string name="audio_category">Audio</string>
+    <string name="system_sounds_and_vibrations_category">System sounds &amp; vibrations</string>
 </resources>

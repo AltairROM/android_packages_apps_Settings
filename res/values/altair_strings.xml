@@ -96,4 +96,8 @@
 
     <!-- Running services - Background processes tab -->
     <string name="background_processes_settings_title">Background processes</string>
+
+    <!-- Force dark mode -->
+    <string name="force_dark_title">Dark mode for third-party apps</string>
+    <string name="force_dark_summary">Forces darker colors in apps lacking dark mode. Some screens may appear off.</string>
 </resources>

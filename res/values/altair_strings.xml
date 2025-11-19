@@ -127,4 +127,8 @@
 
     <!-- Running services - Background processes tab -->
     <string name="background_processes_settings_title">Background processes</string>
+
+    <!-- Force LTE_CA -->
+    <string name="force_lte_ca_title">LTE carrier aggregation</string>
+    <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands</string>
 </resources>

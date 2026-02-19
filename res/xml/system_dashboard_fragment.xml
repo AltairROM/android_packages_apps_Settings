@@ -19,7 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="system_dashboard_screen"
     android:title="@string/header_category_system">
-    
+
     <com.android.settingslib.widget.IllustrationPreference
         android:key="sys_illustration"
         settings:lottie_rawRes="@raw/sys_illustration"
@@ -80,6 +80,7 @@
         android:fragment="com.android.settings.inputmethod.MouseSettingFragment"
         settings:controller="com.android.settings.inputmethod.MouseSettingsController"/>
 
+    <!--
     <Preference
         android:key="gesture_settings"
         android:title="@string/gesture_preference_title"
@@ -87,6 +88,7 @@
         android:order="-250"
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+    -->
 
     <Preference
         android:key="date_time_settings"

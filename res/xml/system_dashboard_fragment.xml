@@ -19,7 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="system_dashboard_screen"
     android:title="@string/header_category_system">
-    
+
     <com.android.settingslib.widget.IllustrationPreference
         android:key="sys_illustration"
         settings:lottie_rawRes="@raw/sys_illustration"
@@ -113,12 +113,14 @@
             android:fragment="com.android.settings.input.gamecontroller.GameControllerListFragment"
             settings:controller="com.android.settings.input.gamecontroller.GameControllerSettingsController" />
 
+        <!--
         <Preference
             android:key="gesture_settings"
             android:title="@string/gesture_preference_title"
             android:icon="@drawable/ic_settings_gestures"
             android:fragment="com.android.settings.gestures.GestureSettings"
             settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController" />
+        -->
 
         <SwitchPreferenceCompat
             android:key="search_gesture_press_hold"

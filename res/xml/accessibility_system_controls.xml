@@ -23,13 +23,13 @@
     <!-- The item is not specific to Accessibility.
         The same entry is under System, which is unlikely to be removed,
         so this is not searchable. -->
-    <Preference
+    <!--<Preference
         android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
         android:key="gesture_system_navigation_input_summary_accessibility"
         android:persistent="false"
         android:title="@string/system_navigation_title"
         settings:searchable="false"
-        settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"/>
+        settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"/>-->
 
     <!-- The item is not specific to Accessibility.
         The same entry is under System > Gesture, which is unlikely to be removed,

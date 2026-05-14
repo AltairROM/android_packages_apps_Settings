@@ -148,6 +148,7 @@ android_library {
 
         // Altair ROM dependencies
         "VendorSupport-preference",
+        "commonutils",
     ],
 
     plugins: [

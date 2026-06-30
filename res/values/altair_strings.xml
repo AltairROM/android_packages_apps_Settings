@@ -222,4 +222,8 @@
 
     <!-- Radio Info -->
     <string name="radio_info_title">Radio info</string>
+
+    <!-- Expanded Dark theme exceptions -->
+    <string name="dark_theme_per_app_title">Expanded mode exceptions</string>
+    <string name="dark_theme_per_app_summary">Choose apps that keep their own appearance instead of using expanded Dark theme</string>
 </resources>

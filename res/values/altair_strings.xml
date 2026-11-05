@@ -170,4 +170,10 @@
     <!-- Disable DNS for VPN -->
     <string name="vpn_enforce_dns_title">Disable for VPN</string>
     <string name="vpn_enforce_dns_summary">Disable the private DNS when connected to a VPN and restore upon disconnecting</string>
+
+    <!-- Battery saver dark theme -->
+    <string name="battery_saver_dark_theme_title">Turn on with Battery Saver</string>
+    <string name="battery_saver_dark_theme_summary">Dark theme turns on and stays on while Battery Saver is on. Saves the most battery on OLED screens.</string>
+    <!-- Not shown in the UI; describes the preference for the settings API -->
+    <string name="battery_saver_dark_theme_purpose">Controls whether Battery Saver turns on dark theme and prevents changing it until Battery Saver turns off.</string>
 </resources>

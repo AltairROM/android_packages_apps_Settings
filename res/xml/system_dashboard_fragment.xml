@@ -20,11 +20,6 @@
     android:key="system_dashboard_screen"
     android:title="@string/header_category_system">
 
-    <com.android.settingslib.widget.IllustrationPreference
-        android:key="sys_illustration"
-        settings:lottie_rawRes="@raw/sys_illustration"
-        android:order="-1001" />
-
     <!--<PreferenceCategory
         android:key="software_update_category"
         android:title="@string/update_device_category_title"
